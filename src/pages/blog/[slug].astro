@@ -1,11 +1,9 @@
 ---
-import {getCollection, getEntryBySlug} from "astro:content"
-import {type CollectionEntry} from "astro:content"
+import {getEntryBySlug} from "astro:content"
 import Layout from "../../layouts/Layout.astro";
 import Main from "../../components/Main.astro";
 import H1 from "../../components/H1.astro";
 import {Image} from "astro:assets";
-import {createGetEntryBySlug} from "astro/dist/content/runtime";
 
 const {slug} = Astro.params;
 const post = await getEntryBySlug("posts", slug as string);
